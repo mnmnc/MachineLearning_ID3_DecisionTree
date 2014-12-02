@@ -3,6 +3,42 @@ MachineLearning_ID3_DecisionTree
 
 Decision Tree creation with ID3 algorithm implemented in Python3. 
 
+## INPUT
+```python
+
+# AURA ->  0 Sunny | 1 Cloud | 2 Rain
+# TEMP ->  0 High  | 1 Medium | 2 Low
+# WILG ->  0 High  | 1 Normal
+# WIND ->  0 High  | 1 Low
+# PLAY ->  0 No    | 1 Yes
+
+mapping = {
+        "AURA": ["Sunny", "Cloudy", "Raining"],
+        "TEMP": ["High", "Medium", "Low"],
+        "WILG": ["High", "Normal"],
+        "WIND": ["High", "Low"],
+        "PLAY": ["No", "Yes"]
+}
+
+data = [
+        {"AURA": 0, "TEMP": 0, "WILG": 0, "WIND": 1, "PLAY": 0},  # 1
+        {"AURA": 0, "TEMP": 0, "WILG": 0, "WIND": 0, "PLAY": 0},  # 2
+        {"AURA": 1, "TEMP": 0, "WILG": 0, "WIND": 1, "PLAY": 1},  # 3
+        {"AURA": 2, "TEMP": 1, "WILG": 0, "WIND": 1, "PLAY": 1},  # 4
+        {"AURA": 2, "TEMP": 2, "WILG": 1, "WIND": 1, "PLAY": 1},  # 5
+        {"AURA": 2, "TEMP": 2, "WILG": 1, "WIND": 0, "PLAY": 0},  # 6
+        {"AURA": 1, "TEMP": 2, "WILG": 1, "WIND": 0, "PLAY": 1},  # 7
+        {"AURA": 0, "TEMP": 1, "WILG": 0, "WIND": 1, "PLAY": 0},  # 8
+        {"AURA": 0, "TEMP": 2, "WILG": 1, "WIND": 1, "PLAY": 1},  # 9
+        {"AURA": 2, "TEMP": 1, "WILG": 1, "WIND": 1, "PLAY": 1},  # 10
+        {"AURA": 0, "TEMP": 1, "WILG": 1, "WIND": 0, "PLAY": 1},  # 11
+        {"AURA": 1, "TEMP": 1, "WILG": 0, "WIND": 0, "PLAY": 1},  # 12
+        {"AURA": 1, "TEMP": 0, "WILG": 1, "WIND": 1, "PLAY": 1},  # 13
+        {"AURA": 2, "TEMP": 1, "WILG": 0, "WIND": 0, "PLAY": 0}   # 14
+]
+
+```
+
 ## OUTPUT:
 ```python
                 [DBG] No root detected. Searching for first one.
